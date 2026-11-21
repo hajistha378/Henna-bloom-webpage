@@ -1,0 +1,648 @@
+/* =====================================
+   HOME FLOWER IMAGE (change only this line to use another flower)
+===================================== */
+
+:root {
+    --home-flower: url("https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1600");
+}
+
+
+/* =====================================
+   GENERAL STYLING
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: cursive;
+    background-color: #fff5f7;
+    color: #684450;
+    transition: 0.4s;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #fff9fa;
+    transition: 0.4s;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c45c7a;
+}
+
+.logo span {
+    color: #ed91ac;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #684450;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #df7795;
+}
+
+
+/* =====================================
+   PROFESSIONAL THEME BUTTON
+===================================== */
+
+#themeBtn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #fce3eb;
+    color: #b94f70;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#themeBtn svg {
+    width: 23px;
+    height: 23px;
+}
+
+#themeBtn:hover {
+    transform: scale(1.08);
+    background-color: #f6d5df;
+}
+
+
+/* =====================================
+   HOME SECTION - FLOWER BACKGROUND
+===================================== */
+
+.home {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(252, 228, 236, 0.62),
+            rgba(248, 203, 216, 0.30),
+            rgba(252, 235, 240, 0.08)
+        ),
+        var(--home-flower);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #4a1a2b;
+    transition: 0.4s;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #5e1630;
+    font-weight: bold;
+}
+
+.home h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 58px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #5e1630;
+}
+
+.home h1 span {
+    color: #9c2d58;
+}
+
+.description {
+    line-height: 1.9;
+    font-size: 15px;
+    color: #3d1424;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 30px;
+    background-color: #d47795;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #b94f70;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   SECTION HEADING
+===================================== */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    color: #c45d7e;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #b94f70;
+    margin-top: 10px;
+}
+
+.gallery-description {
+    margin-top: 15px;
+    color: #81515f;
+    letter-spacing: normal !important;
+    font-size: 14px !important;
+}
+
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about {
+    padding: 85px 15%;
+    text-align: center;
+    background-color: #fff5f7;
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 2;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* =====================================
+   DESIGNS SECTION
+===================================== */
+
+.designs {
+    background-color: #fce8ee;
+    padding: 80px 8%;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.design-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.design-card {
+    background-color: #fffafb;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(100, 50, 60, 0.08);
+    transition: 0.3s;
+}
+
+.design-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(150, 65, 95, 0.18);
+}
+
+.design-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.design-card:hover img {
+    transform: scale(1.05);
+}
+
+.design-info {
+    padding: 22px 15px 25px;
+}
+
+.design-card h3 {
+    margin: 5px 0 10px;
+    color: #b94f70;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.design-card p {
+    color: #81515f;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   DESIGN PRICE
+===================================== */
+
+.design-price {
+    color: #c45c7a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 8px 15px;
+    display: inline-block;
+    background-color: #fce3eb;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.design-card:hover .design-price {
+    background-color: #d47795;
+    color: white;
+}
+
+
+/* =====================================
+   SERVICES SECTION
+===================================== */
+
+.services {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #fff9fa;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #fce8ee;
+    width: 220px;
+    padding: 30px 15px;
+    border-radius: 15px;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background-color: #f6d5df;
+    transform: translateY(-5px);
+}
+
+.service-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: #b94f70;
+    margin: 15px 0 10px;
+}
+
+.service-box p {
+    font-size: 12px;
+}
+
+
+/* =====================================
+   CONTACT SECTION
+===================================== */
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fce8ee;
+}
+
+.contact > p {
+    font-size: 14px;
+}
+
+.contact-number {
+    margin-top: 15px;
+}
+
+.contact-number a {
+    color: #b94f70;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-number a:hover {
+    color: #8f3a56;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    background-color: #000000;
+    color: white;
+    transition: 0.4s;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark-mode {
+    background-color: #24151e;
+    color: #fce8ee;
+}
+
+body.dark-mode .navbar {
+    background-color: #38232e;
+}
+
+body.dark-mode .logo {
+    color: #ffb5cb;
+}
+
+body.dark-mode .logo span {
+    color: #e98ca9;
+}
+
+body.dark-mode .nav-links a {
+    color: #fbe5ec;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #ff9fbd;
+}
+
+body.dark-mode #themeBtn {
+    background-color: #563444;
+    color: #ffb5cb;
+}
+
+body.dark-mode #themeBtn:hover {
+    background-color: #694154;
+}
+
+
+/* HOME DARK MODE */
+
+body.dark-mode .home {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(252, 228, 236, 0.62),
+            rgba(248, 203, 216, 0.30),
+            rgba(252, 235, 240, 0.08)
+        ),
+        var(--home-flower);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #4a1a2b;
+}
+
+body.dark-mode .home h1 {
+    color: #5e1630;
+}
+
+body.dark-mode .home h1 span {
+    color: #9c2d58;
+}
+
+body.dark-mode .subtitle {
+    color: #5e1630;
+}
+
+body.dark-mode .description {
+    color: #3d1424;
+}
+
+
+/* ABOUT DARK MODE */
+
+body.dark-mode .about {
+    background-color: #24151e;
+}
+
+
+/* DESIGNS DARK MODE */
+
+body.dark-mode .designs {
+    background-color: #38232e;
+}
+
+body.dark-mode .design-card {
+    background-color: #49303d;
+    color: #fbe5ec;
+}
+
+body.dark-mode .design-card h3 {
+    color: #ffb5cb;
+}
+
+body.dark-mode .design-card p {
+    color: #fbe5ec;
+}
+
+body.dark-mode .gallery-description {
+    color: #f0d4df;
+}
+
+
+/* SERVICES DARK MODE */
+
+body.dark-mode .services {
+    background-color: #24151e;
+}
+
+body.dark-mode .service-box {
+    background-color: #49303d;
+}
+
+body.dark-mode .service-box:hover {
+    background-color: #5c394b;
+}
+
+body.dark-mode .service-box h3 {
+    color: #ffb5cb;
+}
+
+
+/* CONTACT DARK MODE */
+
+body.dark-mode .contact {
+    background-color: #38232e;
+}
+
+body.dark-mode .contact-number a {
+    color: #ffb5cb;
+}
+
+body.dark-mode .contact-number a:hover {
+    color: #ffd0de;
+}
+
+
+/* HEADINGS DARK MODE */
+
+body.dark-mode .section-heading h2 {
+    color: #ffb5cb;
+}
+
+body.dark-mode .section-heading p {
+    color: #f39ab6;
+}
+
+
+/* FOOTER DARK MODE */
+
+body.dark-mode footer {
+    background-color: #000000;
+    color: #ffe5ea;
+}
+
+
+/* DESIGN PRICE DARK MODE */
+
+body.dark-mode .design-price {
+    background-color: #563444;
+    color: #ffb5cb;
+}
+
+body.dark-mode .design-card:hover .design-price {
+    background-color: #d47795;
+    color: white;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    .design-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .home {
+        padding: 60px 7%;
+    }
+
+    .about {
+        padding: 60px 8%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .design-container {
+        grid-template-columns: 1fr;
+    }
+
+    .design-card {
+        width: 100%;
+        max-width: 380px;
+        margin: auto;
+    }
+
+    .design-card img {
+        height: 250px;
+    }
+
+    .designs {
+        padding: 60px 6%;
+    }
+
+}
