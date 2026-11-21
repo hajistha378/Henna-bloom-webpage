@@ -18,11 +18,20 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: cursive;
     background-color: #fff5f7;
     color: #684450;
     transition: 0.4s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -94,6 +103,52 @@ body {
 #themeBtn:hover {
     transform: scale(1.08);
     background-color: #f6d5df;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-btn {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fce3eb;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #b94f70;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: #f6d5df;
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 
@@ -446,6 +501,18 @@ body.dark-mode #themeBtn:hover {
     background-color: #694154;
 }
 
+body.dark-mode .menu-btn {
+    background-color: #563444;
+}
+
+body.dark-mode .menu-btn span {
+    background-color: #ffb5cb;
+}
+
+body.dark-mode .menu-btn:hover {
+    background-color: #694154;
+}
+
 
 /* HOME DARK MODE */
 
@@ -590,28 +657,55 @@ body.dark-mode .design-card:hover .design-price {
         gap: 20px;
     }
 
+    .about {
+        padding: 80px 10%;
+    }
+
 }
 
 
 @media (max-width: 768px) {
 
     .navbar {
-        flex-direction: column;
-        gap: 20px;
+        padding: 18px 6%;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: flex;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 0 8px;
+        order: 3;
     }
 
-    .home h1 {
-        font-size: 40px;
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 15px;
     }
 
     .home {
-        padding: 60px 7%;
+        min-height: auto;
+        padding: 70px 7%;
+        background-position: center;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 14px;
     }
 
     .about {
@@ -619,7 +713,17 @@ body.dark-mode .design-card:hover .design-price {
     }
 
     .section-heading h2 {
-        font-size: 29px;
+        font-size: 30px;
+    }
+
+    .designs,
+    .services,
+    .contact {
+        padding: 65px 6%;
+    }
+
+    .service-box {
+        width: min(100%, 280px);
     }
 
 }
@@ -633,7 +737,7 @@ body.dark-mode .design-card:hover .design-price {
 
     .design-card {
         width: 100%;
-        max-width: 380px;
+        max-width: 420px;
         margin: auto;
     }
 
@@ -641,8 +745,67 @@ body.dark-mode .design-card:hover .design-price {
         height: 250px;
     }
 
-    .designs {
-        padding: 60px 6%;
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    #themeBtn,
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    #themeBtn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .home {
+        padding: 56px 6%;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .home h1 {
+        font-size: 34px;
+        line-height: 1.25;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .about-text {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .design-card img {
+        height: 220px;
+    }
+
+    .service-box {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .contact-number a {
+        font-size: 16px;
+        overflow-wrap: anywhere;
     }
 
 }

@@ -24,7 +24,7 @@
                 Henna <span>Bloom</span>
             </div>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#designs">Designs</a></li>
@@ -32,25 +32,33 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button id="themeBtn"
-                    aria-label="Switch to dark mode"
-                    title="Change appearance">
+            <div class="nav-actions">
+                <button id="themeBtn"
+                        aria-label="Switch to dark mode"
+                        title="Change appearance">
 
-                <svg viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true">
+                    <svg viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true">
 
-                    <circle cx="12" cy="12" r="9"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"/>
+                        <circle cx="12" cy="12" r="9"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"/>
 
-                    <path d="M12 3 A9 9 0 0 0 12 21 Z"
-                          fill="currentColor"/>
+                        <path d="M12 3 A9 9 0 0 0 12 21 Z"
+                              fill="currentColor"/>
 
-                </svg>
+                    </svg>
 
-            </button>
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
 
         </nav>
     </header>

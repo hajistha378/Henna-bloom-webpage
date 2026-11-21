@@ -3,6 +3,8 @@
 // =================================
 
 const themeBtn = document.getElementById("themeBtn");
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navLinks");
 
 
 // =================================
@@ -55,6 +57,25 @@ themeBtn.addEventListener("click", function() {
 
 
 // =================================
+// MOBILE MENU
+// =================================
+
+if (menuBtn && navMenu) {
+
+    menuBtn.addEventListener("click", function() {
+
+        const isOpen = navMenu.classList.toggle("open");
+
+        menuBtn.classList.toggle("active", isOpen);
+        menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+    });
+
+}
+
+
+// =================================
 // NAVIGATION CLICK EVENT
 // =================================
 
@@ -65,6 +86,13 @@ navLinks.forEach(function(link) {
     link.addEventListener("click", function() {
 
         console.log("Welcome to Henna Bloom!");
+
+        if (navMenu && menuBtn) {
+            navMenu.classList.remove("open");
+            menuBtn.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open menu");
+        }
 
     });
 
