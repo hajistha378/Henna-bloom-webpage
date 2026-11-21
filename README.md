@@ -6,7 +6,7 @@ A simple, elegant website for Henna Bloom — showcasing henna designs, services
 
 ## Live Website
 
-- **Visit:** https://henna-bloom-webpage.netlify.app
+- **Visit:** https://henna-bloom9cc.netlify.app
 
 ## Features
 
